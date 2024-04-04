@@ -16,6 +16,11 @@ class ProblemService {
     const problems = await this.problemRepository.getAllProblems();
     return problems;
   }
+
+  async getProblem(problemId) {
+    const problem = await this.problemRepository.getProblem(problemId);
+    return problem;
+  }
 }
 
 module.exports = ProblemService;
